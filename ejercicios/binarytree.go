@@ -66,3 +66,83 @@ func (t *BinaryTree[int]) Height() int {
 		return 0
 	}
 }
+
+// Ejercicios
+
+
+// Ejercicio 1
+func (t *BinaryTree[int]) SumaDeNodos()int{
+	if t.root == nil{
+		return 0
+	}
+	return int(t.root.SumaDeNodos())
+}
+
+
+// Ejercicio 2
+func (t *BinaryTree[int]) SumaDeHojas() int {
+	if t.root == nil {
+		return 0
+	}
+
+	return int(t.SumaDeHojas())
+
+}
+
+
+// Ejercicio 3
+func (t *BinaryTree[int]) SumaNodosInternos()int{
+	if t.root == nil{
+		return 0
+	}
+	return int(t.root.SumaDeNodos() - t.root.SumaDeHojas() - t.root.data)
+}
+
+// Ejercicio 4
+func (t *BinaryTree[int]) SumaNodosPares()int{
+	if t.root == nil{
+		return 0
+	}
+
+	return int(t.root.SumaNodosPares())
+}
+
+
+// Ejercicio 5
+func (t *BinaryTree[int]) SumaNodosMayoresA6()int{
+	if t.root == nil{
+		return 0
+	}
+
+	return int(t.root.SumaNodosMayoresA6())
+}
+
+// Ejercicio 6
+func (t *BinaryTree[int]) CompararacionAlturasEntreSubarboles() int{
+	if t.root == nil{
+		return -1
+	}
+
+	return int(t.root.CompararacionAlturasEntreSubarboles())
+}
+
+
+// Ejercicio 7
+func (t *BinaryTree[int]) SumaDeHojasIzquierdas()int{
+	
+	if t.root == nil{
+		return 0
+	}
+
+	return int(t.root.SumaDeHojasIzquierdas())
+}
+
+
+// Ejercicio 8 
+func (t *BinaryTree[data]) SumaNodosDerechosImpares()int{
+	if t.root == nil{
+		return 0
+	}
+
+	return int(t.root.SumaNodosDerechosImpares())
+}
